@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 const Default = StyleSheet.create({
-  exRafa: {
+  ex: {
     paddingHorizontal: 15,
     marginVertical: 5,
     borderRadius: 10,
@@ -9,7 +9,7 @@ const Default = StyleSheet.create({
     borderColor: '#222',
     fontSize: 24,
     fontWeight: 'bold',
-    backgroundColor: 'green',
+    backgroundColor: 'rgb(43, 125, 233)',
   },
 });
 
