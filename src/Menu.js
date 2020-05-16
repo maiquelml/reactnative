@@ -4,6 +4,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 
 import Simple from './components/Simple';
+import Message from './components/Message';
 
 const style = {flex: 1, alignItems: 'center', justifyContent: 'center'};
 
@@ -37,6 +38,7 @@ export default () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Message" component={Message} />
         <Drawer.Screen name="Foo" component={Foo} />
         <Drawer.Screen
           name="Bar"
