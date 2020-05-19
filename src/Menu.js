@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import Simple from './components/Simple';
 import Message from './components/Message';
 import List from './components/List';
+import Display from './components/Display';
 
 const style = {flex: 1, alignItems: 'center', justifyContent: 'center'};
 
@@ -39,6 +40,7 @@ export default () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Display" component={Display} />
         <Drawer.Screen name="List" component={List} />
         <Drawer.Screen name="Message" component={Message} />
         <Drawer.Screen name="Foo" component={Foo} />
