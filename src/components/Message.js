@@ -6,13 +6,16 @@ import {
   ToastAndroid,
   Platform,
   TouchableHighlight,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
   Text,
 } from 'react-native';
 
 const style = {flex: 1, alignItems: 'center', justifyContent: 'center'};
 const styleButton = {
   backgroundColor: 'rgb(43, 125, 233)',
-  width: 200,
+  paddingLeft: 15,
+  paddingRight: 15,
   height: 40,
   borderRadius: 3,
 };
@@ -55,24 +58,35 @@ const Message = () => {
           onPress={() => customNotify('This is a message TOP', 'SHORT', 'TOP')}
           onLongPress={() =>
             customNotify('This is a message TOP', 'LONG', 'TOP')
-          }>
-          <View style={styleButton}>
-            <Text style={fontButton}>Notify message TOP</Text>
-          </View>
+          }
+          style={styleButton}>
+          <Text style={fontButton}>Notify TOP Highlight</Text>
         </TouchableHighlight>
       </View>
       <View style={style}>
-        <TouchableHighlight
+        <TouchableOpacity
           onPress={() =>
             customNotify('This is a message BOTTOM', 'SHORT', 'BOTTOM')
           }
           onLongPress={() =>
             customNotify('This is a message BOTTOM', 'LONG', 'BOTTOM')
+          }
+          style={styleButton}>
+          <Text style={fontButton}>Notify Bottom with Opacity</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={style}>
+        <TouchableWithoutFeedback
+          onLongPress={() =>
+            Alert.alert(
+              'Information',
+              'Message Button Without Feedback and long press',
+            )
           }>
           <View style={styleButton}>
-            <Text style={fontButton}>Notify message Bottom</Text>
+            <Text style={fontButton}>Notify Without Feedback</Text>
           </View>
-        </TouchableHighlight>
+        </TouchableWithoutFeedback>
       </View>
     </>
   );
