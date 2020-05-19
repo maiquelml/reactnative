@@ -34,23 +34,19 @@ const Details = () => (
   </View>
 );
 
-const Drawer = createDrawerNavigator();
+const {Navigator, Screen} = createDrawerNavigator();
 
 export default () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Display" component={Display} />
-        <Drawer.Screen name="List" component={List} />
-        <Drawer.Screen name="Message" component={Message} />
-        <Drawer.Screen name="Foo" component={Foo} />
-        <Drawer.Screen
-          name="Bar"
-          component={Bar}
-          options={{title: 'New Bar'}}
-        />
-        <Drawer.Screen name="Details" component={Details} />
-      </Drawer.Navigator>
+      <Navigator initialRouteName="Home">
+        <Screen name="Display" component={Display} />
+        <Screen name="List" component={List} />
+        <Screen name="Message" component={Message} />
+        <Screen name="Foo" component={Foo} />
+        <Screen name="Bar" component={Bar} options={{title: 'New Bar'}} />
+        <Screen name="Details" component={Details} />
+      </Navigator>
     </NavigationContainer>
   );
 };
