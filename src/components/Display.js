@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, Dimensions, TextInput} from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  Dimensions,
+  TextInput,
+  Image, // There is the ImageBackground
+} from 'react-native';
+
+import png from '../../assets/png.png';
 
 const styles = StyleSheet.create({
   title: {
@@ -26,6 +34,13 @@ const styles = StyleSheet.create({
   inputEmpty: {
     color: '#888',
   },
+  img: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    resizeMode: 'contain',
+    marginTop: 5,
+    maxHeight: 25,
+  },
 });
 
 class Display extends Component {
@@ -43,8 +58,10 @@ class Display extends Component {
   };
 
   render() {
+    // console.error('ASAAAAAAAAAA');
     return (
       <>
+        <Image source={png} style={styles.img} />
         <Text style={styles.title}>Text Default</Text>
         <Text
           style={[
