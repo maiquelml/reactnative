@@ -1,6 +1,11 @@
 import {StyleSheet} from 'react-native';
 
 const Default = StyleSheet.create({
+  init: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   ex: {
     paddingHorizontal: 15,
     marginVertical: 5,
