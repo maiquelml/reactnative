@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import {
   View,
   Text,
@@ -7,11 +7,11 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
   StyleSheet,
-} from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
+} from 'react-native'
+import DateTimePicker from '@react-native-community/datetimepicker'
 
-import moment from 'moment';
-import 'moment/locale/pt-br';
+import moment from 'moment'
+import 'moment/locale/pt-br'
 
 const styles = StyleSheet.create({
   container: {
@@ -41,16 +41,16 @@ const styles = StyleSheet.create({
     flex: 9,
     justifyContent: 'center',
   },
-});
+})
 
 class ModalDate extends Component {
   state = {
     isVisible: false,
     showDatePicker: false,
     date: new Date(),
-  };
+  }
 
-  onToggle = () => this.setState({isVisible: !this.state.isVisible});
+  onToggle = () => this.setState({isVisible: !this.state.isVisible})
 
   getDatePicker = () => (
     <DateTimePicker
@@ -60,7 +60,7 @@ class ModalDate extends Component {
       }
       mode="date"
     />
-  );
+  )
 
   render() {
     return (
@@ -93,8 +93,8 @@ class ModalDate extends Component {
           </Text>
         </TouchableWithoutFeedback>
       </View>
-    );
+    )
   }
 }
 
-export default ModalDate;
+export default ModalDate

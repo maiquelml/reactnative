@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import {
   Text,
   StyleSheet,
   Dimensions,
   TextInput,
   Image, // There is the ImageBackground
-} from 'react-native';
+} from 'react-native'
 
-import png from '../../assets/png.png';
+import png from '../../assets/png.png'
 
 const styles = StyleSheet.create({
   title: {
@@ -41,24 +41,23 @@ const styles = StyleSheet.create({
     marginTop: 5,
     maxHeight: 25,
   },
-});
+})
 
 class Display extends Component {
   state = {
     displayValue: 'Aa',
     emptyValue: true,
-  };
+  }
 
   onChangeText = (text) => {
     if (text) {
-      this.setState({displayValue: text, emptyValue: false});
+      this.setState({displayValue: text, emptyValue: false})
     } else {
-      this.setState({displayValue: 'Aa', emptyValue: true});
+      this.setState({displayValue: 'Aa', emptyValue: true})
     }
-  };
+  }
 
   render() {
-    // console.error('ASAAAAAAAAAA');
     return (
       <>
         <Image source={png} style={styles.img} />
@@ -82,8 +81,8 @@ class Display extends Component {
         <Text style={styles.title}>Input with style of Dimensions method</Text>
         <TextInput style={styles.input} onChangeText={this.onChangeText} />
       </>
-    );
+    )
   }
 }
 
-export default Display;
+export default Display

@@ -9,16 +9,16 @@
  * https://reactnative.dev/docs/scrollview
  */
 
-import React from 'react';
-import {SafeAreaView, FlatList, View, Text} from 'react-native';
-import Simple from './Simple';
+import React from 'react'
+import {SafeAreaView, FlatList, View, Text} from 'react-native'
+import Simple from './Simple'
 
-const LIMIT = 25;
+const LIMIT = 25
 
-const items = [];
+const items = []
 
 for (let i = 1; i <= LIMIT; i++) {
-  items.push({text: 'Item ' + i});
+  items.push({text: 'Item ' + i})
 }
 
 const List = () => {
@@ -26,7 +26,7 @@ const List = () => {
     <View>
       <Simple {...item} />
     </View>
-  );
+  )
 
   return (
     <SafeAreaView>
@@ -36,7 +36,7 @@ const List = () => {
         keyExtractor={(_, index) => index.toString()}
       />
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default List;
+export default List

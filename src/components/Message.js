@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   View,
   Button,
@@ -9,29 +9,29 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   Text,
-} from 'react-native';
+} from 'react-native'
 
-const style = {flex: 1, alignItems: 'center', justifyContent: 'center'};
+const style = {flex: 1, alignItems: 'center', justifyContent: 'center'}
 const styleButton = {
   backgroundColor: 'rgb(43, 125, 233)',
   paddingLeft: 15,
   paddingRight: 15,
   height: 40,
   borderRadius: 3,
-};
+}
 const fontButton = {
   fontSize: 14,
   color: 'white',
   textAlign: 'center',
   textTransform: 'uppercase',
   marginTop: 10,
-};
+}
 
 const Message = () => {
   const notify = (msg) =>
     Platform.OS === 'android'
       ? ToastAndroid.show(msg, ToastAndroid.LONG)
-      : Alert.alert('Information', 'Verify plataform.');
+      : Alert.alert('Information', 'Verify plataform.')
 
   const customNotify = (msg, time, position) => {
     if (Platform.OS === 'android') {
@@ -39,11 +39,11 @@ const Message = () => {
         msg,
         ToastAndroid[time],
         ToastAndroid[position],
-      );
+      )
     } else {
-      Alert.alert('Information', 'Verify plataform.');
+      Alert.alert('Information', 'Verify plataform.')
     }
-  };
+  }
 
   return (
     <>
@@ -89,7 +89,7 @@ const Message = () => {
         </TouchableWithoutFeedback>
       </View>
     </>
-  );
-};
+  )
+}
 
-export default Message;
+export default Message

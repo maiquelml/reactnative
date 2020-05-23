@@ -1,25 +1,25 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import {
   View,
   StyleSheet,
   TouchableOpacity,
   Button,
   Dimensions,
-} from 'react-native';
-import Simple from './Simple';
-import Swipeable from 'react-native-gesture-handler/Swipeable';
+} from 'react-native'
+import Simple from './Simple'
+import Swipeable from 'react-native-gesture-handler/Swipeable'
 
 const Confirmation = ({onPress}) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <Simple text="Delete?" style={styles.delete} />
     </TouchableOpacity>
-  );
-};
+  )
+}
 
 const DeleteInfo = () => (
   <Simple text="Deleting..." style={{...styles.delete, ...styles.deleting}} />
-);
+)
 
 const initialState = {
   list: [
@@ -29,17 +29,17 @@ const initialState = {
     {id: 4, text: 'Item For'},
     {id: 5, text: 'Item Five'},
   ],
-};
+}
 
 class SwipeableContainer extends Component {
   state = {
     ...initialState,
-  };
+  }
 
   onDelete = (id) =>
-    this.setState({list: this.state.list.filter((item) => item.id != id)});
+    this.setState({list: this.state.list.filter((item) => item.id != id)})
 
-  refresh = () => this.setState({list: initialState.list});
+  refresh = () => this.setState({list: initialState.list})
 
   render() {
     return (
@@ -61,7 +61,7 @@ class SwipeableContainer extends Component {
           </View>
         )}
       </View>
-    );
+    )
   }
 }
 const styles = StyleSheet.create({
@@ -82,6 +82,6 @@ const styles = StyleSheet.create({
     marginTop: 'auto',
     marginBottom: 50,
   },
-});
+})
 
-export default SwipeableContainer;
+export default SwipeableContainer

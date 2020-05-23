@@ -1,8 +1,8 @@
-import React from 'react';
-import {View, Button} from 'react-native';
+import React from 'react'
+import {View, Button} from 'react-native'
 
-import Simple from './Simple';
-import Default from '../style/Default';
+import Simple from './Simple'
+import Default from '../style/Default'
 
 const Bar = ({navigation}) => {
   return (
@@ -10,7 +10,7 @@ const Bar = ({navigation}) => {
       <Simple text="Bar component" />
       <Button title="Open Drawer" onPress={() => navigation.openDrawer()} />
     </View>
-  );
-};
+  )
+}
 
-export default Bar;
+export default Bar
